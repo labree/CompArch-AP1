@@ -3,8 +3,8 @@
  * 
  * Autores:
  * Enrique Mari Clavecilla Labre, 202408380501
- * [Nome e matrícula]
- * [Nome e matrícula]
+ * Bernardo Casanovas Linhares, 202407085879
+ * [Nome e matríc
  * [Nome e matrícula]
  */
 

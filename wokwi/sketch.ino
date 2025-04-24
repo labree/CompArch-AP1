@@ -132,30 +132,9 @@ void handleBuzzer(float distance) {
   }
 }
 
-void checkSystemState() {
-  bool switch1 = !digitalRead(SWITCH1_PIN);
-  bool switch2 = !digitalRead(SWITCH2_PIN);
-
-  digitalWrite(SWITCH1_LED, switch1);
-  digitalWrite(SWITCH2_LED, switch2);
-
-  if (!switch1 && !switch2) {
-    systemEnabled = false;
-    soundEnabled = false;
-  } else if (switch1 && switch2) {
-    systemEnabled = true;
-    soundEnabled = true;
-  } else {
-    systemEnabled = true;
-    soundEnabled = false;
-  }
-}
-
 void loop() {
-  checkSystemState();
 
-  if (systemEnabled) {
-    float distance = getDistance();
+  float distance = getDistance();
 
     Serial.print("Distância: ");
     Serial.print(distance);
@@ -163,14 +142,6 @@ void loop() {
 
     handleLEDs(distance);
     handleBuzzer(distance);
-  } else {
-    // Sistema desligado
-    for (int i = 0; i < NUM_LEDS; i++) {
-      digitalWrite(LED_PINS[i], LOW);
-    }
-    noTone(BUZZER_PIN);
-    Serial.println("Sistema desligado");
-  }
 
   delay(100);
 }

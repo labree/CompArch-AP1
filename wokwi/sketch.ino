@@ -4,8 +4,8 @@
  * Autores:
  * Enrique Mari Clavecilla Labre, 202408380501
  * Bernardo Casanovas Linhares, 202407085879
- * [Nome e matríc
- * [Nome e matrícula]
+ * Sabrina Herdy Marenga, 202407095951
+ * Anderson Lima de Araujó Junior, 202408573421
  */
 
 // Pinos do sensor e buzzer

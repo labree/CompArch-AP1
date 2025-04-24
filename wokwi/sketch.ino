@@ -2,10 +2,10 @@
  * Sistema de Detecção de Alvo
  * 
  * Autores:
- * Enrique Mari Clavecilla Labre, 202408380501
- * Bernardo Casanovas Linhares, 202407085879
- * Sabrina Herdy Marenga, 202407095951
- * Anderson Lima de Araujó Junior, 202408573421
+ * Enrique Mari Clavecilla Labre, 202408380501, TA
+ * Bernardo Casanovas Linhares, 202407085879, TA
+ * Sabrina Herdy Marenga, 202407095951, TP
+ * Anderson Lima de Araujó Junior, 202408573421, TA
  */
 
 // Pinos do sensor e buzzer
@@ -136,12 +136,12 @@ void loop() {
 
   float distance = getDistance();
 
-    Serial.print("Distância: ");
-    Serial.print(distance);
-    Serial.println(" cm");
+  Serial.print("Distância: ");
+  Serial.print(distance);
+  Serial.println(" cm");
 
-    handleLEDs(distance);
-    handleBuzzer(distance);
+  handleLEDs(distance);
+  handleBuzzer(distance);
 
   delay(100);
 }
